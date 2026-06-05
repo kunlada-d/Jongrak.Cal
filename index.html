@@ -444,8 +444,8 @@
             const percent = parseFloat(document.getElementById('goldPercent').value) || 0;
             const weight = parseFloat(document.getElementById('goldWeight').value) || 0;
 
-            const pricePerGram = Math.trunc(price * (percent / 100) * 0.0656);
-            const total = Math.trunc(pricePerGram * weight);
+            const pricePerGram = Math.trunc(price * (percent / 100) *0.99* 0.0656);
+            const total = Math.trunc(pricePerGram * weight)*(percent / 100);
 
             document.getElementById('goldPerGram').innerText = pricePerGram.toLocaleString('th-TH') + " บาท";
             document.getElementById('goldTotal').innerText = total.toLocaleString('th-TH') + " บาท";
